@@ -8,11 +8,7 @@ var mr_firstSectionHeight,
     mr_floatingProjectSections,
     mr_scrollTop = 0;
 
-<<<<<<< HEAD
-$(document).ready(function() { 
-=======
 $(document).ready(function() {
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     "use strict";
 
     // Smooth scroll to inner links
@@ -32,11 +28,7 @@ $(document).ready(function() {
                 offset = $('body').attr('data-smooth-scroll-offset');
                 offset = offset*1;
             }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
             smoothScroll.init({
                 selector: '.inner-link',
                 selectorHeader: null,
@@ -171,36 +163,22 @@ $(document).ready(function() {
         if (!e) e = window.event;
         e.stopPropagation();
     });
-<<<<<<< HEAD
-    
-    // Offscreen Nav
-    
-=======
 
     // Offscreen Nav
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     if($('.offscreen-toggle').length){
     	$('body').addClass('has-offscreen-nav');
     }
     else{
         $('body').removeClass('has-offscreen-nav');
     }
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     $('.offscreen-toggle').click(function(){
     	$('.main-container').toggleClass('reveal-nav');
     	$('nav').toggleClass('reveal-nav');
     	$('.offscreen-container').toggleClass('reveal-nav');
     });
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     $('.main-container').click(function(){
     	if($(this).hasClass('reveal-nav')){
     		$(this).removeClass('reveal-nav');
@@ -208,11 +186,7 @@ $(document).ready(function() {
     		$('nav').removeClass('reveal-nav');
     	}
     });
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     $('.offscreen-container a').click(function(){
     	$('.offscreen-container').removeClass('reveal-nav');
     	$('.main-container').removeClass('reveal-nav');
@@ -220,11 +194,7 @@ $(document).ready(function() {
     });
 
     // Populate filters
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     $('.projects').each(function() {
 
         var filters = "";
@@ -304,31 +274,19 @@ $(document).ready(function() {
                         directionNav: false,
                         controlNav: false
                     });
-<<<<<<< HEAD
-                }       
-=======
                 }
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
                return html;
            }
            twitterFetcher.fetch(TweetConfig);
       });
 
     // Instagram Feed
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     if($('.instafeed').length){
     	jQuery.fn.spectragram.accessData = {
 			accessToken: '1406933036.dc95b96.2ed56eddc62f41cbb22c1573d58625a2',
 			clientID: '87e6d2b8a0ef4c7ab8bc45e80ddd0c6a'
-<<<<<<< HEAD
-		};	
-=======
 		};
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
 
         $('.instafeed').each(function() {
             var feedID = $(this).attr('data-user-name');
@@ -337,15 +295,9 @@ $(document).ready(function() {
                 max: 12
             });
         });
-<<<<<<< HEAD
-    }   
-
-   
-=======
     }
 
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
 
     // Flickr Feeds
 
@@ -353,19 +305,11 @@ $(document).ready(function() {
         $('.flickr-feed').each(function(){
             var userID = $(this).attr('data-user-id');
             var albumID = $(this).attr('data-album-id');
-<<<<<<< HEAD
-            $(this).flickrPhotoStream({ id: userID, setId: albumID, container: '<li class="masonry-item" />' });   
-            setTimeout(function(){
-                initializeMasonry();
-                window.dispatchEvent(new Event('resize'));
-            }, 1000); 
-=======
             $(this).flickrPhotoStream({ id: userID, setId: albumID, container: '<li class="masonry-item" />' });
             setTimeout(function(){
                 initializeMasonry();
                 window.dispatchEvent(new Event('resize'));
             }, 1000);
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
         });
 
     }
@@ -375,11 +319,7 @@ $(document).ready(function() {
         $('.slider-all-controls').flexslider({
             start: function(slider){
                 if(slider.find('.slides li:first-child').find('.fs-vid-background video').length){
-<<<<<<< HEAD
-                   slider.find('.slides li:first-child').find('.fs-vid-background video').get(0).play(); 
-=======
                    slider.find('.slides li:first-child').find('.fs-vid-background video').get(0).play();
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
                 }
             },
             after: function(slider){
@@ -422,15 +362,9 @@ $(document).ready(function() {
             controlNav: false
         });
     }
-<<<<<<< HEAD
-    
-    // Lightbox gallery titles
-    
-=======
 
     // Lightbox gallery titles
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     $('.lightbox-grid li a').each(function(){
     	var galleryTitle = $(this).closest('.lightbox-grid').attr('data-gallery-title');
     	$(this).attr('data-lightbox', galleryTitle);
@@ -454,15 +388,9 @@ $(document).ready(function() {
             console.log('Only Vimeo and Youtube videos are supported at this time');
         }
     });
-<<<<<<< HEAD
-    
-    // Multipurpose Modals
-    
-=======
 
     // Multipurpose Modals
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     jQuery('.foundry_modal[modal-link]').remove();
 
     if($('.foundry_modal').length && (!jQuery('.modal-screen').length)){
@@ -476,17 +404,10 @@ $(document).ready(function() {
     });
 
     jQuery(document).on('wheel mousewheel scroll', '.foundry_modal, .modal-screen', function(evt){
-<<<<<<< HEAD
-        $(this).get(0).scrollTop += (evt.originalEvent.deltaY); 
-        return false;
-    });
-    
-=======
         $(this).get(0).scrollTop += (evt.originalEvent.deltaY);
         return false;
     });
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     $('.modal-container:not([modal-link])').each(function(index) {
         if(jQuery(this).find('iframe[src]').length){
         	jQuery(this).find('.foundry_modal').addClass('iframe-modal');
@@ -502,11 +423,7 @@ $(document).ready(function() {
             jQuery(this).find('.foundry_modal').clone().appendTo('body').attr('modal-link', index).prepend(jQuery('<i class="ti-close close-modal">'));
         }
     });
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     $('.btn-modal').unbind('click').click(function(){
     	var linkedModal = jQuery('.foundry_modal[modal-link="' + jQuery(this).attr('modal-link') + '"]'),
             autoplayMsg = "";
@@ -521,19 +438,11 @@ $(document).ready(function() {
             linkedModal.find('video').get(0).play();
         }
         linkedModal.toggleClass('reveal-modal');
-<<<<<<< HEAD
-        return false; 
-    });
-    
-    // Autoshow modals
-	
-=======
         return false;
     });
 
     // Autoshow modals
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
 	$('.foundry_modal[data-time-delay]').each(function(){
 		var modal = $(this);
 		var delay = modal.attr('data-time-delay');
@@ -588,11 +497,7 @@ $(document).ready(function() {
                     modal.removeClass('reveal-modal');
                     $('.modal-screen').removeClass('reveal-modal');
                 }
-<<<<<<< HEAD
-                },delay); 
-=======
                 },delay);
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
             }
         }else{
             setTimeout(function(){
@@ -600,17 +505,10 @@ $(document).ready(function() {
                     modal.removeClass('reveal-modal');
                     $('.modal-screen').removeClass('reveal-modal');
                 }
-<<<<<<< HEAD
-            },delay); 
-        }
-    });
-    
-=======
             },delay);
         }
     });
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     jQuery('.close-modal:not(.modal-strip .close-modal)').unbind('click').click(function(){
     	var modal = jQuery(this).closest('.foundry_modal');
         modal.toggleClass('reveal-modal');
@@ -622,11 +520,7 @@ $(document).ready(function() {
         }
         jQuery('.modal-screen').removeClass('reveal-modal');
     });
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     jQuery('.modal-screen').unbind('click').click(function(){
         if(jQuery('.foundry_modal.reveal-modal').find('iframe').length){
             jQuery('.foundry_modal.reveal-modal').find('iframe').attr('src', '');
@@ -634,11 +528,7 @@ $(document).ready(function() {
     	jQuery('.foundry_modal.reveal-modal').toggleClass('reveal-modal');
     	jQuery(this).toggleClass('reveal-modal');
     });
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     jQuery(document).keyup(function(e) {
 		 if (e.keyCode == 27) { // escape key maps to keycode `27`
             if(jQuery('.foundry_modal').find('iframe').length){
@@ -648,15 +538,9 @@ $(document).ready(function() {
 			jQuery('.modal-screen').removeClass('reveal-modal');
 		}
 	});
-<<<<<<< HEAD
-    
-    // Modal Strips
-    
-=======
 
     // Modal Strips
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     jQuery('.modal-strip').each(function(){
     	if(!jQuery(this).find('.close-modal').length){
     		jQuery(this).append(jQuery('<i class="ti-close close-modal">'));
@@ -664,11 +548,7 @@ $(document).ready(function() {
     	var modal = jQuery(this);
 
         if(typeof modal.attr('data-cookie') != "undefined"){
-<<<<<<< HEAD
-           
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
             if(!mr_cookies.hasItem(modal.attr('data-cookie'))){
             	setTimeout(function(){
             		modal.addClass('reveal-modal');
@@ -680,11 +560,7 @@ $(document).ready(function() {
             },1000);
         }
     });
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     jQuery('.modal-strip .close-modal').click(function(){
         var modal = jQuery(this).closest('.modal-strip');
         if(typeof modal.attr('data-cookie') != "undefined"){
@@ -812,11 +688,7 @@ $(document).ready(function() {
     $('.map-holder').click(function() {
         $(this).addClass('interact');
     });
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     if($('.map-holder').length){
     	$(window).scroll(function() {
 			if ($('.map-holder.interact').length) {
@@ -824,11 +696,7 @@ $(document).ready(function() {
 			}
 		});
     }
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     // Countdown Timers
 
     if ($('.countdown').length) {
@@ -841,11 +709,7 @@ $(document).ready(function() {
             });
         });
     }
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     //                                                            //
     //                                                            //
     // Contact form code                                          //
@@ -905,11 +769,7 @@ $(document).ready(function() {
                 formError.fadeOut(200);
                 // Create a new loading spinner in the submit button.
                 submitButton.html(jQuery('<div />').addClass('form-loading')).attr('disabled', 'disabled');
-<<<<<<< HEAD
-                
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
                 try{
                     $.ajax({
                         url: preparedForm.attr('action'),
@@ -922,11 +782,7 @@ $(document).ready(function() {
                         success: function(data){
                             // Request was a success, what was the response?
                             if (data.result != "success" && data.Status != 200) {
-<<<<<<< HEAD
-                                
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
                                 // Error from Mail Chimp or Campaign Monitor
 
                                 // Keep the current error text in a data attribute on the form
@@ -937,15 +793,9 @@ $(document).ready(function() {
 
                                 submitButton.html(submitButton.attr('data-text')).removeAttr('disabled');
                             } else {
-<<<<<<< HEAD
-                                
-                                // Got Success from Mail Chimp
-                                
-=======
 
                                 // Got Success from Mail Chimp
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
                                 submitButton.html(submitButton.attr('data-text')).removeAttr('disabled');
 
                                 successRedirect = thisForm.attr('success-redirect');
@@ -978,15 +828,9 @@ $(document).ready(function() {
 
                     submitButton.html(submitButton.attr('data-text')).removeAttr('disabled');
                 }
-<<<<<<< HEAD
-            
-
-                
-=======
 
 
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
             } else {
                 formError.fadeIn(1000);
                 setTimeout(function() {
@@ -1013,11 +857,7 @@ $(document).ready(function() {
 
                 // Hide the error if one was shown
                 formError.fadeOut(200);
-<<<<<<< HEAD
-                
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
                 // Create a new loading spinner in the submit button.
                 submitButton.html(jQuery('<div />').addClass('form-loading')).attr('disabled', 'disabled');
 
@@ -1121,21 +961,13 @@ $(document).ready(function() {
         }
 
     //
-<<<<<<< HEAD
-    //    
-=======
     //
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     // End contact form code
     //
     //
 
 
-<<<<<<< HEAD
-    // Get referrer from URL string 
-=======
     // Get referrer from URL string
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     if (getURLParameter("ref")) {
         $('form.form-email').append('<input type="text" name="referrer" class="hidden" value="' + getURLParameter("ref") + '"/>');
     }
@@ -1149,15 +981,9 @@ $(document).ready(function() {
     if ((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
         $('section').removeClass('parallax');
     }
-<<<<<<< HEAD
-    
-    // Disqus Comments
-    
-=======
 
     // Disqus Comments
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     if($('.disqus-comments').length){
 		/* * * CONFIGURATION VARIABLES * * */
 		var disqus_shortname = $('.disqus-comments').attr('data-shortname');
@@ -1178,48 +1004,24 @@ $(document).ready(function() {
             script.type = 'text/javascript';
             script.src = 'https://maps.googleapis.com/maps/api/js?key='+apiKey+'&callback=initializeMaps';
             script.className = 'gMapsAPI';
-<<<<<<< HEAD
-            document.body.appendChild(script);  
-        } 
-    }
-
-}); 
-
-$(window).load(function() { 
-=======
             document.body.appendChild(script);
         }
     }
 
-  var ttid = "killminusnueve";
-  var response = $.getJSON("https://query.yahooapis.com/v1/public/yql?q=select%20content%20from%20html%20where%20url%3D%22https%3A%2F%2Ftwitter.com%2F"+ttid+"%22%20and%20xpath%3D%27%2F%2Fli%5Bcontains(%40class%2C%22ProfileNav-item--tweets%22)%5D%2Fa%2Fspan%5Bcontains(%40class%2C%22ProfileNav-value%22)%5D%27&format=json&callback=");
-  response.success(function (data) {
-      alert(data.query.results.span);
-  });
-
 });
 
 $(window).load(function() {
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     "use strict";
 
     // Initialize Masonry
 
     setTimeout(initializeMasonry, 1000);
-<<<<<<< HEAD
-   
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
 
     mr_firstSectionHeight = $('.main-container section:nth-of-type(1)').outerHeight(true);
 
 
-<<<<<<< HEAD
-}); 
-=======
 });
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
 function updateNav() {
 
     var scrollY = mr_scrollTop;
@@ -1414,21 +1216,12 @@ window.initializeMaps = function(){
                     if(address != undefined && address[0] != ""){
                             geocoder.geocode( { 'address': address[0].replace('[nomarker]','')}, function(results, status) {
                                 if (status == google.maps.GeocoderStatus.OK) {
-<<<<<<< HEAD
-                                var map = new google.maps.Map(mapInstance, mapOptions); 
-                                map.setCenter(results[0].geometry.location);
-                                
-                                address.forEach(function(address){
-                                    var markerGeoCoder;
-                                    
-=======
                                 var map = new google.maps.Map(mapInstance, mapOptions);
                                 map.setCenter(results[0].geometry.location);
 
                                 address.forEach(function(address){
                                     var markerGeoCoder;
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
                                     markerImage = {url: window.mr_variant == undefined ? 'img/mapmarker.png' : '../img/mapmarker.png', size: new google.maps.Size(50,50), scaledSize: new google.maps.Size(50,50)};
                                     if(/(\-?\d+(\.\d+)?),\s*(\-?\d+(\.\d+)?)/.test(address) ){
                                         var latlong = address.split(','),
@@ -1463,11 +1256,7 @@ window.initializeMaps = function(){
                     }
                     else if(latitude != undefined && latitude != "" && latitude != false && longitude != undefined && longitude != "" && longitude != false ){
                         mapOptions.center   = { lat: latitude, lng: longitude};
-<<<<<<< HEAD
-                        map = new google.maps.Map(mapInstance, mapOptions); 
-=======
                         map = new google.maps.Map(mapInstance, mapOptions);
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
                         marker              = new google.maps.Marker({
                                                     position: { lat: latitude, lng: longitude },
                                                     map: map,
@@ -1477,11 +1266,7 @@ window.initializeMaps = function(){
 
                     }
 
-<<<<<<< HEAD
-                }); 
-=======
                 });
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
         }
     }
 }
@@ -1521,22 +1306,14 @@ function prepareSignup(iFrame){
     // Set action on the form
     form.attr('action', action);
 
-<<<<<<< HEAD
-    // Clone form input fields from 
-=======
     // Clone form input fields from
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
     jQuery(div).find('input, select, textarea').not('input[type="submit"]').each(function(){
         jQuery(this).clone().appendTo(form);
 
     });
 
     return form;
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
 
 }
 
@@ -1608,8 +1385,3 @@ var mr_cookies = {
 /*\
 |*|  END COOKIE LIBRARY
 \*/
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 60ebe70dac2bcf9aacfc5953b7c1c9aa2e930580
